@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* src/index.css */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
