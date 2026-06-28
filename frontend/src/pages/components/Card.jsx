@@ -2,7 +2,7 @@ import React from 'react'
 
 const Card = () => {
   return (
-     <div className="max-w-lg w-full bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow duration-200">
+     <div className="max-w-lg mt-[1vh] w-full bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow duration-200">
             {/* Header */}
             <div className="flex items-start justify-between mb-3">
                 <div className="flex items-center space-x-3">
