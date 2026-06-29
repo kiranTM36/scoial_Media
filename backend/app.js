@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 
 //Database Connection
 const db = require('./db')
@@ -9,6 +10,10 @@ const userModel = require('./models/userModel')
 
 //routes Import
 const userRoute = require('./routes/userRoutes')
+
+app.use(cors())
+app.use(express.json())
+app.use(express.urlencoded({extended : true}))
 
 app.use('/user', userRoute)
 

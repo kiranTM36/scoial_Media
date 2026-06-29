@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const Form = ({name}) => {
+const Form = ({name,onEvent}) => {
   const [data, setData] = useState({
     username : "",
     email : "",
@@ -16,9 +16,14 @@ const Form = ({name}) => {
     })
     console.log(value)
   }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    onEvent(data)
+  }
   return (
     <div className='h-[80vh] flex justify-center items-center'>
-        <form className="bg-white text-gray-500 w-full max-w-[340px] mx-4 md:p-6 p-4 py-8 text-left text-sm rounded-lg shadow-[0px_0px_10px_0px] shadow-black/10">
+        <form onSubmit={handleSubmit} className="bg-white text-gray-500 w-full max-w-[340px] mx-4 md:p-6 p-4 py-8 text-left text-sm rounded-lg shadow-[0px_0px_10px_0px] shadow-black/10">
             <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">{name}</h2>
 
             {name === "Sign Up" && (<input  className="w-full border mt-1 bg-indigo-500/5 mb-2 border-gray-500/10 outline-none rounded py-2.5 px-3" type="text" name='username' onChange={handleChange} placeholder="Username" required />)}
