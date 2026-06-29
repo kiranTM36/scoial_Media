@@ -14,9 +14,9 @@ const Navbar = () => {
 
             <div className='h-full flex justify-between items-center'>
                 <Link to=''><div><Home /></div></Link>
-                <Link to='/'><div><User /></div></Link>
+                <Link to='/friends'><div><User /></div></Link>
                 <Link to=''><div><Clapperboard /></div></Link>
-                <Link to=''><div><Store /></div></Link>
+                <Link to='/market'><div><Store /></div></Link>
                 <Link><div><UsersRound /></div></Link>
             </div>
             <div className='h-full flex justify-end items-center gap-1 pr-5'>

@@ -6,6 +6,11 @@ import { Signup } from './pages/auth/Signup'
 import Login from './pages/auth/Login'
 import Friends from './pages/Friends'
 import Layout from './pages/Layout'
+import Friend from './pages/components/Friend'
+import Navbar from './pages/components/Navbar'
+import NavbarLayout from './pages/NavbarLayout'
+import Ecard from './pages/Ecom/Ecard'
+import Epage from './pages/Ecom/Epage'
 
 const App = () => {
   return (
@@ -18,12 +23,17 @@ const App = () => {
             {/* WITH Navbar + Sidebar */}
             <Route element={<Layout />}>
               <Route index element={<Home />} />
+            </Route>
+
+            <Route element={<NavbarLayout />}>
               <Route path="friends" element={<Friends />} />
+              <Route path='market' element={<Epage />} />
             </Route>
 
             {/* WITHOUT Navbar */}
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
+            <Route path='/user' element={<Friend />} />
 
           </Routes>
         </div>

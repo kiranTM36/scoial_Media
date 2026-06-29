@@ -2,6 +2,7 @@ import React from 'react'
 import Friend from './components/Friend'
 import { Outlet } from 'react-router-dom'
 import Navbar from './components/Navbar'
+import LOUS from '../images/Lou.jpg'
 
 const Layout = () => {
   return (
@@ -12,11 +13,7 @@ const Layout = () => {
         
         {/* Left Sidebar */}
         <div className="overflow-y-auto px-2">
-          <Friend />
-          <Friend />
-          <Friend />
-          <Friend />
-          <Friend />
+          
         </div>
 
         {/* Middle Content */}
@@ -26,7 +23,11 @@ const Layout = () => {
 
         {/* Right Sidebar */}
         <div className="overflow-y-auto">
-          Right Side Content
+          <div className='flex justify-center items-center mt-2'>
+            <div className='h-[50vh] w-[20vw] rounded-2xl bg-center shadow-md bg-cover' style={{
+              backgroundImage : `url(${LOUS})`
+            }}></div>
+          </div>
         </div>
 
       </div>
