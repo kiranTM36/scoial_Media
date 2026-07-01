@@ -11,6 +11,7 @@ import Navbar from './pages/components/Navbar'
 import NavbarLayout from './pages/NavbarLayout'
 import Ecard from './pages/Ecom/Ecard'
 import Epage from './pages/Ecom/Epage'
+import Form from './pages/form/Form'
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path='/user' element={<Friend />} />
 
+            <Route path='/form' element={<Form />} />
           </Routes>
         </div>
 

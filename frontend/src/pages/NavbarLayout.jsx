@@ -2,6 +2,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from './components/Navbar'
+import Story from './components/Story'
 
 const NavbarLayout = () => {
     return (
